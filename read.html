@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read more</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .readmore{
+            font-size: 18px;
+            line-height: 1.5rem;
+        }
+        .h2{
+            text-transform: capitalize;
+        }
+        .card{
+            /* background: red; */
+            padding: 22px 30px;
+            border-radius: 5px;
+            line-height: 1.8rem;
+            margin: 1rem 5rem;
+        }
+        #ch{
+            display: none;
+        }
+        #ch:checked ~ .content{
+            display: block;
+        }
+        #ch:checked ~ label{
+            display: none;
+        }
+        .content{
+            display: none;   
+        }
+        label{
+            display: inline-block;
+            cursor: pointer;
+            color: #fff;
+            background: rgb( 72, 113, 97);
+            padding: 3px 13px;
+            border-radius: 3px;
+            margin-top: 12px;
+        }
+        @media (max-width: 850px){
+            .card {
+            width: 48rem;
+            /* background: red; */
+            padding: 22px 30px;
+            border-radius: 5px;
+            line-height: 1.8rem;
+            margin: 1rem 2rem;
+            }
+        }
+        @media (max-width: 450px){
+            .readmore{
+                font-size: 1.5rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <input type="checkbox" id="ch">
+        <h2 class="h2">hello everyone</h2>
+        <p class="readmore">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat tenetur possimus, eius nam animi labore laudantium, distinctio unde sed error suscipit recusandae. Quas unde enim tempora debitis fugit voluptate, voluptatem commodi ratione.</p>
+        <div class="content">
+            <p class="readmore">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat possimus dolores asperiores odit molestias maiores earum aliquam numquam sequi ab, culpa quis quidem?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat possimus dolores asperiores odit molestias maiores earum aliquam numquam sequi ab, culpa quis quidem?</p>
+
+            <label for="ch">Read less</label>
+        </div>
+        <label for="ch">Read more</label>
+    </div>
+</body>
+</html>
