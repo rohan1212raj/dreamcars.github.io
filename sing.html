@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>main screen</title>
+    </head>
+    <link rel="stylesheet" href="sing.css">
+    <body>
+        <div class="box1">
+            <img src="img/signup 1.jpg" class="box1-img">
+            <div class="box2">
+                <div class="box3">
+                    <p class="box3a"><p class="box3b"></p></p>
+                </div>
+                <div class="box4">
+                    <p class="box4a">Let's set up your account</p><br>
+                    <form action="" onsubmit="return validate()" method="post">
+                        <input type="text" placeholder="enter your full name" id="name"><spam id="name1" class="same"><spam class="hide">d</spam></spam>
+                        <input type="number" placeholder="please enter you mobile number" id="nummber"><spam id="name2" class="same"><spam class="hide">d</spam></spam>
+                        <input type="email" placeholder="please enter your email id" id="email" required><spam id="name1" class="same"><spam class="hide">d</spam></spam>
+                        <input type="password" placeholder="please enter password" id="pass"><spam id="name4" class="same"><spam class="hide">d</spam></spam>
+                        <input type="password" placeholder="confirm password" id="password">
+                        <!-- <select id="profile">
+                            <option>--select choice--</option>
+                            <option value="self"required >Self</option>
+                            <option value="son">son</option>
+                            <option value="Daughter">Daughter</option>
+                            <option value="Brother">Brother</option>
+                            <option>Son</option>
+                        </select>
+                        <select name="" id="relison" required>
+                            <option>--select choice--</option>
+                            <option value="hindu">hindu</option>
+                            <option value="hindu">Muslim</option>
+                            <option value="hindu">Sikh</option>
+                            <option value="hindu">Budhist</option>
+                        </select> -->
+                        <div class="gender"  >
+                            Gender:-<input type="radio" name="male" id="male" required>male
+                                  <input type="radio" name="male" id="male" required>Female
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox" required><p id="checkbox1">I Agree TO The Privacy Policy and T&C </p>
+                        </div>
+                        <button id="button">Signup</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            function validate(){
+                var name = document.getElementById("name").value;
+                var number = document.getElementById("nummber").value;
+                var passwords = document.getElementById("pass").value;
+                var password = document.getElementById("password").value;
+                if(name.length==""){
+                    document.getElementById("name1").innerHTML="**please enter your name";
+                    return false;
+                }
+
+                else if(name.length<3){
+                    document.getElementById("name1").innerHTML="**please enter valid name";
+                    return false;
+                }
+                else if(name.length>30){
+                    document.getElementById("name1").innerHTML="** not valid ";
+                    return false;
+                }
+                if(number.length>12){
+                    document.getElementById("name2").innerHTML="max towelth number"
+                    return false;
+                }
+                else if(number.length<8){
+                    document.getElementById("name2").innerHTML="min eight digits"
+                    return false;
+                }
+                else if(number.length==""){
+                    document.getElementById("name2").innerHTML="please enter the number"
+                    return false;
+                }
+                else if(passwords.length==""){
+                    document.getElementById("name4").innerHTML="please enter your password"
+                    return false
+                }
+                else if(passwords.length<6){
+                    document.getElementById("name4").innerHTML="miniman six digits required"
+                    return false
+                }
+                else if(passwords.length>12){
+                    document.getElementById("name4").innerHTML="maxiam eight digits required"
+                    return false
+                }
+                else if(passwords==password){
+                    return true;
+                }
+                else if(password==passwords){
+                    return true;
+                }
+                else if(password!=passwords){
+                    document.getElementById("name4").innerHTML="dont matched the conform password"
+                    return false;
+                }
+                else if(password!=passwords){
+                    document.getElementById("name4").innerHTML="dont matched the conform password"
+                    return false;
+                }
+                else if(password==""){
+                    document.getElementById("name4").innerHTML="please enter conform password"
+                    return false;
+                }
+                else{
+                    alert("seccesfully ragister")
+                    return true;
+                }
+
+            }
+        </script>
+    </body>
+</html>

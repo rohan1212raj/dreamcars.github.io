@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+.box1{
+    height: 600px;
+    width: 100%;
+}
+.box1-img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    --webkit-filter: blur(5px);
+}
+.box2{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.box3{
+    height: 100px;
+    width: 45%;
+    margin: auto;
+}
+.box4{
+    background:linear-gradient(to top ,rgba(0,0,0,0.5)70%,rgba(0,0,0.5)110%), url(img/bike\ bc1.webp);
+    margin: auto;
+    height: 400px;
+    width: 25%;
+}
+.box3a,.box3b{
+    color: white;
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+}
+.box4a{
+    height: 35%;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+.box4aimg{
+    height: 100%;
+    width: 100%;
+}
+.box4b{
+    height: 50%;
+    width: 82%;
+    margin: auto;
+}
+.forget{
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+}
+.forget1{
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    margin-top: 6px;
+}
+.box5,.box5a,.box5b,.box5c{
+    height: 37px;
+    width: 95%;
+    margin-top: 4px;
+    margin: auto;
+}
+.box5b{
+    margin-top: 20px;
+}
+.box5c{
+    margin-top: 10px;
+}
+.hide{
+    color: rgba(203, 0, 0, 0);
+}
+#alert{
+    font-size: 10px;
+    color: rgb(255, 0, 0);
+    margin-left: 8px;
+}
+#number, #button, #otp, #submit{
+    width: 90%;
+    height: 100%;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+}
+#button{
+    background-color: aquamarine;
+    margin-left: 10px;
+}
+#otp{
+    width: 79%;
+    margin-left: 15px;
+    text-align: center;
+}
+#submit{
+    background-color: yellow;
+    width: 100%;
+}

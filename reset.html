@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>main screen</title>
+    </head>
+    <link rel="stylesheet" href="reset.css">
+    <body>
+        <div class="box1">
+            <img src="img/reset 2.webp" class="box1-img">
+            <div class="box2">
+                <div class="box3">
+                    <p class="box3a"> <p class="box3b"></p></p>
+                </div>
+                <div class="box4">
+                    <div class="box4a"><img src="img/reset1.jpg" class="box4aimg"></div>
+                    <div class="box4b">
+                        <p class="forget">Forget Password ?</p>
+                        <p class="forget1">You Can Reset Your Password Here.</p>
+                        <form action="loginpage.html" onsubmit="return validate()" method="post">
+                        <div class="box5b"><input type="text" id="otp" value="" placeholder="New Password" ></div><p id="alert"><spam class="hide">U</spam></p>
+                        <div class="box5b"><input type="text" id="otp1" value="" placeholder="Conform Password" ></div><p id="alert1"><spam class="hide">U</spam></p>
+                        <div class="box5c"><button id="submit">Reset Password</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <script>
+            function validate(){
+                var otp = document.getElementById("otp").value;
+                var otp1 = document.getElementById("otp1").value;
+                if(otp.length==""){
+                    document.getElementById("alert").innerHTML="**please enter new password"
+                    return false;
+                }
+                else if(otp.length>8){
+                    document.getElementById("alert").innerHTML="**max eight digits"
+                    return false;
+                }
+                else if(otp.length<4){
+                    document.getElementById("alert").innerHTML="**min four digits"
+                    return false;
+                }
+                else if(otp!=otp1){
+                    document.getElementById("alert1").innerHTML="**dont match your password"
+                    return false;
+                }
+                else if(otp.length==""){
+                    document.getElementById("alert1").innerHTML="**enter conform password"
+                    return false;
+                }
+                else{
+                    alert("Password has been Succesfully reset")
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

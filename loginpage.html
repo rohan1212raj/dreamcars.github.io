@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login page</title>
+    </head>
+
+    <link rel="stylesheet" href="loginpage.css">
+    <body>
+        <div class="box1">
+            <img src="img/login 8.webp" class="box1-img">
+            <div class="box2">
+                <div class="box3"><p class="box3a"></p><p class="box3a"></p></div>
+                <div class="box4">
+                    <p class="box4a">Login Here</p>
+
+                    <form action="login.html" onsubmit="return validate()">
+
+
+                    <input type="email" placeholder="Enter the Email Here" class="box4b"  id="email" value=""><spam id="one"></spam>
+                    
+                    <input type="password" placeholder="password" class="box4c"  id="pass" value=""><spam id="two" ></spam>
+
+                    <p class="box4d"><input type="checkbox" required class="box4e">  <spam>Remember Me </spam> <a href="forget.html" class="box4f">Forget password</a></p>
+                    
+                    <button class="box4g">Login</button>
+
+                    <p class="or">or</p>
+                    <div class="box4a1">
+                        <div class="box4a1b"><a href="https://www.facebook.com/" class="box4a1c"><img src="img/fb.png" class="box4aimg"></a></div>
+                        <div class="box4a1b"><a href="https://www.google.com/" class="box4a1c"><img src="img/google.png" class="box4aimg"></a></div>
+                        <div class="box4a1b"><a href="https://www.instagram.com/" class="box4a1c"><img src="img/Instagram.png" class="box4aimg"></a></div>
+                    </div>
+                    <p class="last">Don't have an account <a href="sing.html" class="last1">Create new one</a></p>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            /*function validate(){
+                var password = document.getElementById("pass").value;
+                if(password.length<=6){
+                    document.getElementById("two").innerHTML="please filed password";
+                    return false;
+                }
+                else if(password.length>=15){
+                    document.getElementById("two").innerHTML="minimam eight digits"
+                    return false;
+                }
+            }*/
+            function validate(){
+                var passworde = document.getElementById("pass").value;
+                var email = document.getElementById("email").value;
+                
+                if(passworde=="@sonukashyap" && email=="singhsonukumar200@gmail.com"){
+                    alert("login sussessfully");
+                    return true;
+                }
+                else if(passworde!="@sonukashyap" && email=="singhsonukumar200@gmail.com"){
+                    document.getElementById("two").innerHTML="wrong password";
+                    return false;
+
+                }
+                else if(passworde=="@sonukashyap" && email!="singhsonukumar200@gmail.com"){
+                    document.getElementById("one").innerHTML="invailid user-id";
+                    return false;
+                }
+                else{
+                    document.getElementById("two").innerHTML="wrong password"
+                    document.getElementById("one").innerHTML="invailid user-id"
+                    return false;
+                    
+                }
+                
+                
+            }
+             /*function validate(){
+                var email = document.getElementById("email").value;
+                if(email=="singhsonukumar200@gmail.com"){
+                    document.getElementById("one").innerHTML="valid user name";
+                    return true;
+                }
+                else{
+                    document.getElementById("one").innerHTML="invalid user name";
+                    return false;
+                }
+            } */
+        </script>
+
+    </body>
+</html>
